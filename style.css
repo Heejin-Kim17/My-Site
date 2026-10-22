@@ -121,3 +121,39 @@ footer{padding:36px 0 50px;text-align:center;font-size:12px;color:var(--muted)}
   .xobj{width:60vw;right:-14%}.hero .sub{top:48%;max-width:60vw}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.three .c{transition:none}}
+
+/* lowercase headings, labels, nav and buttons */
+h1,h2,h3,.eyebrow,nav,.btn,.team b,.w .t,.tags span,.stat p,.num-hero p,dt{text-transform:lowercase}
+
+/* flip cards (about > roles) */
+.team .card{perspective:1200px;aspect-ratio:3/4;outline:none;cursor:default}
+.team .inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.team .card:hover .inner,.team .card:focus .inner,.team .card:focus-within .inner{transform:rotateY(180deg)}
+.team .face{position:absolute;inset:0;border-radius:var(--radius);-webkit-backface-visibility:hidden;backface-visibility:hidden;padding:26px}
+.team .front{aspect-ratio:auto;display:flex;align-items:flex-end}
+.team .front::after{display:none}
+.team .front h3{font-size:clamp(22px,2.2vw,30px);line-height:1.1}
+.team .back{transform:rotateY(180deg);background:var(--card);border:1px solid var(--line);display:flex;align-items:center}
+.team .back ul{list-style:none;display:grid;gap:10px}
+.team .back li{font-size:14px;letter-spacing:-.01em;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.team .back li:last-child{border-bottom:0;padding-bottom:0}
+.team .card:focus-visible .face{outline:2px solid var(--ink);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.team .inner{transition:none}}
+
+/* eyebrow labels (dot + small text) stay uppercase */
+.eyebrow{text-transform:uppercase}
+
+/* forest green, shiny name */
+.name,.phead h1 span.name,h2 span.name{
+  background:linear-gradient(110deg,#0b3a1f 0%,#14532d 30%,#3f9a63 46%,#14532d 58%,#0b3a1f 80%,#14532d 100%);
+  background-size:250% 100%;background-position:0% 50%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#14532d;
+  animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){.name{animation:none}}
+
+/* card backs: smaller text so every role list fits */
+.team .back{padding:18px 20px}
+.team .back ul{gap:7px;width:100%}
+.team .back li{font-size:clamp(11px,1.05vw,13px);line-height:1.25;padding-bottom:7px}
+@media(max-width:860px){.team .back li{font-size:12px}}
