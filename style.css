@@ -157,3 +157,8 @@ h1,h2,h3,.eyebrow,nav,.btn,.team b,.w .t,.tags span,.stat p,.num-hero p,dt{text-
 .team .back ul{gap:7px;width:100%}
 .team .back li{font-size:clamp(11px,1.05vw,13px);line-height:1.25;padding-bottom:7px}
 @media(max-width:860px){.team .back li{font-size:12px}}
+
+/* misc card has 9 items: tighten further */
+.team .card:last-child .back{padding:14px 18px}
+.team .card:last-child .back ul{gap:4px}
+.team .card:last-child .back li{font-size:clamp(10px,.95vw,12px);line-height:1.2;padding-bottom:4px}
