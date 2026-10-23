@@ -191,3 +191,7 @@ h1,h2,h3,.eyebrow,nav,.btn,.team b,.w .t,.tags span,.stat p,.num-hero p,dt{text-
 .three.four{grid-template-columns:repeat(4,1fr);gap:14px}.three.four .c{padding:10px 10px 22px}.three.four h3{font-size:17px}
 @media(max-width:900px){.three.four{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.three.four{grid-template-columns:1fr}}
+
+/* home hero: halve the gap between headline and buttons */
+.hero h1{padding-bottom:.06em}
+.hero .row{margin-top:clamp(18px,2.5vw,30px)}
