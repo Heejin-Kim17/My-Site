@@ -195,3 +195,22 @@ h1,h2,h3,.eyebrow,nav,.btn,.team b,.w .t,.tags span,.stat p,.num-hero p,dt{text-
 /* home hero: halve the gap between headline and buttons */
 .hero h1{padding-bottom:.06em}
 .hero .row{margin-top:clamp(18px,2.5vw,30px)}
+
+/* home cards: colour fills the card, text sits on top, white frame stays */
+.three.four .tile{aspect-ratio:auto;min-height:300px;border-radius:14px;padding:24px 22px;display:flex;flex-direction:column;justify-content:flex-end}
+.three.four .tile::after{display:none}
+.three.four .tile h3{margin:0 0 8px;font-size:20px}
+.three.four .tile p{margin:0;color:#5f594c}
+.three.four .tile .go{margin:16px 0 0}
+.three.four .c{padding:10px}
+
+/* ai workflows: tools row */
+.tools{max-width:900px;margin:90px auto 0;text-align:center}
+.tools h2{font-size:clamp(28px,4vw,44px)}
+.tools .tags{justify-content:center;gap:10px;margin-top:30px}
+.tools .tags span{font-size:13px;letter-spacing:0;text-transform:none;padding:10px 18px;border-radius:999px;color:var(--ink)}
+
+/* how i work: four cards */
+.vals{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.vals{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.vals{grid-template-columns:1fr}}
