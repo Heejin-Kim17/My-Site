@@ -168,3 +168,17 @@ h1,h2,h3,.eyebrow,nav,.btn,.team b,.w .t,.tags span,.stat p,.num-hero p,dt{text-
 .btn.gray-m{background:#8c887e;color:#fff}.btn.gray-m:hover{background:#7d796f;transform:translateY(-1px)}
 
 @media(max-width:600px){nav{padding:6px 6px 6px 8px;gap:0}nav a.l{padding:8px 7px;font-size:11px}nav .btn{padding:8px 12px;font-size:11px}}
+
+/* front of role cards: same shiny forest green as the name */
+.team .front h3{
+  background:linear-gradient(110deg,#0b3a1f 0%,#14532d 30%,#3f9a63 46%,#14532d 58%,#0b3a1f 80%,#14532d 100%);
+  background-size:250% 100%;background-position:0% 50%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#14532d;
+  animation:shine 5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.team .front h3{animation:none}}
+
+/* solid forest green button (no shine) */
+.btn.green{background:#14532d;color:#fff}.btn.green:hover{background:#0b3a1f;transform:translateY(-1px)}
+
+/* inverse of .btn.green: white with forest green text */
+.btn.green-inv{background:#fff;color:#14532d;border-color:#14532d}.btn.green-inv:hover{background:#eef5f0;transform:translateY(-1px)}
