@@ -162,3 +162,9 @@ h1,h2,h3,.eyebrow,nav,.btn,.team b,.w .t,.tags span,.stat p,.num-hero p,dt{text-
 .team .card:last-child .back{padding:14px 18px}
 .team .card:last-child .back ul{gap:4px}
 .team .card:last-child .back li{font-size:clamp(10px,.95vw,12px);line-height:1.2;padding-bottom:4px}
+
+/* gray buttons */
+.btn.gray-l{background:#d8d5cd;color:var(--ink)}.btn.gray-l:hover{background:#cdcac1;transform:translateY(-1px)}
+.btn.gray-m{background:#8c887e;color:#fff}.btn.gray-m:hover{background:#7d796f;transform:translateY(-1px)}
+
+@media(max-width:600px){nav{padding:6px 6px 6px 8px;gap:0}nav a.l{padding:8px 7px;font-size:11px}nav .btn{padding:8px 12px;font-size:11px}}
