@@ -182,3 +182,12 @@ h1,h2,h3,.eyebrow,nav,.btn,.team b,.w .t,.tags span,.stat p,.num-hero p,dt{text-
 
 /* inverse of .btn.green: white with forest green text */
 .btn.green-inv{background:#fff;color:#14532d;border-color:#14532d}.btn.green-inv:hover{background:#eef5f0;transform:translateY(-1px)}
+
+/* home hero: space between headline and buttons */
+.hero h1{padding-bottom:.12em}
+.hero .row{margin-top:clamp(36px,5vw,60px)}
+
+/* home: four link cards */
+.three.four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.three.four{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.three.four{grid-template-columns:1fr}}
