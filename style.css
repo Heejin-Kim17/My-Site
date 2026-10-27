@@ -246,3 +246,25 @@ dl.facts dt,dl.facts dd{padding:18px 0}
 dl.facts dt{padding-top:20px}
 dl.facts dd{font-size:14px}
 @media(max-width:600px){dl.facts{grid-template-columns:100px 1fr}}
+
+/* home: hero + explore section fit in one screen (desktop) */
+.hero{min-height:0;padding:96px 0 26px}
+.hero h1{font-size:clamp(46px,7vw,92px);padding-bottom:.04em}
+.hero + section{padding:30px 0 28px}
+.hero + section .eyebrow{margin-bottom:12px}
+.hero + section h2{font-size:clamp(28px,3.4vw,42px)}
+.hero + section .lede{margin-top:10px;font-size:15px}
+.hero + section .three{margin-top:26px}
+.hero + section .three.four .tile,.hero + section .three .tile{min-height:0;padding:20px 20px}
+.hero + section .tile h3{font-size:18px;margin-bottom:6px}
+.hero + section .tile p{font-size:13px;line-height:1.5}
+.hero + section .tile .go{margin-top:12px;font-size:13px}
+@media(max-width:860px){.hero{padding:96px 0 30px}.hero + section{padding:40px 0}}
+
+/* home hero: taller background band, same font size */
+.hero{padding:96px 0 90px}
+@media(max-width:860px){.hero{padding:96px 0 70px}}
+
+/* home hero: a bit taller again */
+.hero{padding:96px 0 150px}
+@media(max-width:860px){.hero{padding:96px 0 110px}}
