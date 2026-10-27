@@ -14,6 +14,14 @@
 .spec{grid-template-columns:minmax(0,300px) 1fr;gap:64px;align-items:start}
 .spec .portrait{display:block;width:100%;max-width:300px;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:22px}
 @media(max-width:860px){.spec{grid-template-columns:1fr}.spec .portrait{max-width:240px}}
+/* about: photo on the left, text on the right, photo vertically centered to the text */
+.about-grid{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:64px;align-items:center}
+.about-grid .portrait{display:block;width:100%;max-width:300px;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:22px;margin:0}
+.about-text p{color:var(--muted);font-size:16px;line-height:1.65;margin:0 0 18px;max-width:none}
+.about-text p:last-child{margin-bottom:0}
+.about-grid + dl.facts{margin-top:56px;grid-template-columns:100px 1fr}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:28px;justify-items:start}.about-grid .portrait{max-width:240px}}
+.about-grid + dl.facts dt,.about-grid + dl.facts dd,dl.facts dt,dl.facts dd{color:#14532d}
 </style>
 </head>
 <body>
@@ -23,7 +31,6 @@
   <a class="l" href="index.html">Home</a>
   <a class="l on" href="about.html" aria-current="page">About</a>
   <a class="l" href="ai-workflows.html">AI Workflows</a>
-  <a class="l" href="#">Candidates</a>
   <a class="btn dark" href="contact.html">Contact</a>
 </nav>
 
@@ -35,17 +42,18 @@
 </header>
 
 <section style="padding-top:20px">
-  <div class="wrap spec">
-    <img class="portrait" src="heejin.jpg" alt="Portrait of Heejin Kim">
-    <div class="body">
-      <p>I’ve been recruiting for over a decade, and I’m now a Sr. GTM Talent Partner at Adobe, supporting our Strategy Consulting, Strategic Sales and Partner Sales teams. I’ve also helped hire for People Analytics, HR, Sales Ops, AI Strategy and Marketing.</p>
-      <p>Before that, I spent five years in agency recruiting, filling finance, accounting and business systems roles. And before recruiting? My background is in project management, from producing audiobooks for Random House to planning large medical conferences, which taught me how to keep timelines, stakeholders and a lot of moving pieces on track.</p>
-      <dl>
-        <dt>Focus</dt><dd>Enterprise SaaS — Digital Strategy, Pre-sales, Strategic Enterprise Sales and Partner Sales</dd>
-        <dt>Tools</dt><dd>LinkedIn Recruiter, Workday, Phenom, Salesforce CRM, BrightHire, HackerRank, AI-assisted workflows</dd>
-        <dt>Location</dt><dd>Los Angeles, CA</dd>
-      </dl>
+  <div class="wrap">
+    <div class="about-grid">
+      <img class="portrait" src="heejin.jpg" alt="Portrait of Heejin Kim">
+      <div class="about-text">
+        <p>I bring over a decade of recruiting experience to my role as a Senior GTM Talent Partner at Adobe, where I support Strategy Consulting, Strategic Sales and Partner Sales. My experience also includes hiring across People Analytics, HR, Sales Operations, AI Strategy and Marketing.</p>
+        <p>Previously, I spent five years in agency recruiting, specializing in finance, accounting and business systems roles. I began my career in project management, producing audiobooks for Random House and planning large medical conferences. Those experiences shaped my approach to recruiting: coordinating stakeholders, managing complex timelines and keeping each search moving forward.</p>
+        <p>I approach AI workflows with a practical mindset, starting with repetitive tasks and building tools that make recruiting more organized and efficient. My goal is to create more time for meaningful conversations, while keeping human judgment and the candidate experience at the center of the process.</p>
+      </div>
     </div>
+    <dl class="facts">
+      <dt>Tools</dt><dd>LinkedIn Recruiter, Workday, Phenom, Salesforce CRM, BrightHire, HackerRank, AI-assisted workflows</dd>
+    </dl>
   </div>
 </section>
 
