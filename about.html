@@ -8,6 +8,13 @@
 <title>About — Heejin Kim</title>
 <meta name="description" content="About Heejin Kim, Talent Partner and Recruiter.">
 <link rel="stylesheet" href="style.css">
+<style>
+/* page-specific sizing, kept here so it works even if style.css is out of date */
+.phead h1.sm{font-size:clamp(34px,5vw,58px)}
+.spec{grid-template-columns:minmax(0,300px) 1fr;gap:64px;align-items:start}
+.spec .portrait{display:block;width:100%;max-width:300px;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:22px}
+@media(max-width:860px){.spec{grid-template-columns:1fr}.spec .portrait{max-width:240px}}
+</style>
 </head>
 <body>
 
