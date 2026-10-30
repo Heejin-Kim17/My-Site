@@ -21,6 +21,9 @@
 .about-text p:last-child{margin-bottom:0}
 .about-grid + dl.facts{margin-top:56px;grid-template-columns:100px 1fr}
 @media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:28px;justify-items:start}.about-grid .portrait{max-width:240px}}
+/* tools row: centered */
+.about-grid + dl.facts,dl.facts{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 28px;text-align:center}
+.about-grid + dl.facts dt,.about-grid + dl.facts dd,dl.facts dt,dl.facts dd{margin:0}
 .about-grid + dl.facts dt,.about-grid + dl.facts dd,dl.facts dt,dl.facts dd{color:#14532d}
 </style>
 </head>
