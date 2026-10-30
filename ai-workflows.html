@@ -16,7 +16,8 @@
 .side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,200px);column-gap:48px;align-items:start}
 .side h3,.side p{grid-column:1}
 .side .shot{grid-column:2;grid-row:1 / span 4;margin:0;max-width:200px}
-.side /* lightbox: pure CSS (no JavaScript). Clicking a thumbnail jumps to #lb-N, which :target shows. */
+.side .shot-meta{grid-column:1}
+/* lightbox: pure CSS (no JavaScript). Clicking a thumbnail jumps to #lb-N, which :target shows. */
 .lb{display:none}
 .lb:target{display:flex;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;animation:lbin .25s ease}
 @keyframes lbin{from{opacity:0}to{opacity:1}}
@@ -28,7 +29,6 @@
 .lb-x:hover{transform:scale(1.06)}
 body:has(.lb:target){overflow:hidden}
 @media(prefers-reduced-motion:reduce){.lb:target{animation:none}}
-.shot-meta{grid-column:1}
 .shot-link{display:block;text-decoration:none}
 .shot-open{display:block;margin-top:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .shot-link:hover .shot-photo{box-shadow:0 6px 20px rgba(0,0,0,.12)}
