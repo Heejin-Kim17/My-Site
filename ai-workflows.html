@@ -12,6 +12,12 @@
 /* workflow screenshot + stage/tool line */
 .w .shot{margin:26px 0 0;max-width:640px}
 .shot-img{aspect-ratio:16/9;border-radius:16px;border:1px solid var(--line);background:linear-gradient(145deg,#f1e7d0,#e6d9bd);display:flex;align-items:center;justify-content:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(40,30,20,.45)}
+/* screenshot to the right of the text */
+.side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);column-gap:48px;align-items:start}
+.side h3,.side p{grid-column:1}
+.side .shot{grid-column:2;grid-row:1 / span 3;margin:0;max-width:340px}
+.shot-photo{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--line)}
+@media(max-width:860px){.side{grid-template-columns:1fr}.side .shot{grid-column:1;grid-row:auto;margin-top:26px}}
 .shot-meta{display:flex;gap:28px;margin-top:14px;font-size:13px;color:var(--ink)}
 .shot-meta b{font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:11px;margin-right:8px}
 </style>
@@ -37,29 +43,25 @@
 <section style="padding-top:20px">
   <div class="wrap">
     <div class="wf">
-      <div class="w"><span class="ix">01</span><div><h3>One Stop Hiring Hub</h3><p>I built a self-serve Hiring Hub for the three businesses I support — a form where a hiring manager picks their group, title, level, and location, and it generates a first-draft job description, panel prompt, interview guide, scorecard and market insights report on the spot, pulling from our existing SharePoint templates where they exist.</p>
+      <div class="w"><span class="ix">01</span><div class="side"><h3>One Stop Hiring Hub</h3><p>I built a self-serve Hiring Hub for the three businesses I support — a form where a hiring manager picks their group, title, level, and location, and it generates a first-draft job description, panel prompt, interview guide, scorecard and market insights report on the spot, pulling from our existing SharePoint templates where they exist.</p>
         <figure class="shot">
-          <div class="shot-img" role="img" aria-label="Screenshot placeholder: Hiring Hub output">Screenshot coming soon</div>
-          <figcaption class="shot-meta"><span><b>Stage</b> Hiring</span><span><b>Tool</b> Claude</span></figcaption>
+          <img class="shot-photo" src="hiring-hub-strategy.png" alt="Screenshot of the One Stop Hiring Hub request form">
+          <figcaption class="shot-meta"><span><b>Stage</b> Hiring</span></figcaption>
         </figure></div></div>
-      <div class="w"><span class="ix">02</span><div><h3>Boolean search builder</h3><p>Uses job descriptions and intake notes to create Boolean search strings with broader options to explore the talent pool and targeted searches to refine results.</p>
+      <div class="w"><span class="ix">02</span><div class="side"><h3>Boolean search builder</h3><p>Uses job descriptions and intake notes to create Boolean search strings with broader options to explore the talent pool and targeted searches to refine results.</p>
         <figure class="shot">
-          <div class="shot-img" role="img" aria-label="Screenshot placeholder: Boolean search builder output">Screenshot coming soon</div>
+          <img class="shot-photo" src="boolean-search-anon.png" alt="Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings">
           <figcaption class="shot-meta"><span><b>Stage</b> Sourcing</span></figcaption>
         </figure></div></div>
-      <div class="w"><span class="ix">03</span><div><h3>Status reporting</h3><p>Turns pipeline data and notes into clear updates for leadership in an email friendly format.</p>
+      <div class="w"><span class="ix">03</span><div class="side"><h3>Status reporting</h3><p>Turns pipeline data and notes into clear updates for leadership in an email friendly format.</p>
         <figure class="shot">
-          <div class="shot-img" role="img" aria-label="Screenshot placeholder: Status reporting output">Screenshot coming soon</div>
+          <img class="shot-photo" src="status-report.png" alt="Sample status report with placeholder reqs: summary counts and open requisitions by stage">
           <figcaption class="shot-meta"><span><b>Stage</b> Reporting</span></figcaption>
         </figure></div></div>
-      <div class="w"><span class="ix">04</span><div><h3>Dashboards</h3><p>Bring pipeline, hiring data and daily priorities into one view, helping me track each search, draft follow-up messages and plan a balanced workload.</p>
+      <div class="w"><span class="ix">04</span><div class="side"><h3>Dashboards</h3><p>Bring pipeline, hiring data and daily priorities into one view, helping me track each search, draft follow-up messages and plan a balanced workload.</p>
         <figure class="shot">
-          <div class="shot-img" role="img" aria-label="Screenshot placeholder: Dashboards output">Screenshot coming soon</div>
+          <img class="shot-photo" src="dashboard.png" alt="Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week">
           <figcaption class="shot-meta"><span><b>Stage</b> Analytics</span></figcaption>
-        </figure></div></div>
-      <div class="w"><span class="ix">05</span><div><h3>Skills Repo</h3><p>A collection of the AI skills I've built for recruiting, organized in one place on GitHub.</p>
-        <figure class="shot">
-          <div class="shot-img" role="img" aria-label="Screenshot placeholder: Skills Repo">Screenshot coming soon</div>
         </figure></div></div>
     </div>
     <p class="note">Examples are adapted from my own workflows, with company branding and internal details removed.</p>
