@@ -266,5 +266,5 @@ dl.facts dd{font-size:14px}
 @media(max-width:860px){.hero{padding:96px 0 70px}}
 
 /* home hero: a bit taller again */
-.hero{padding:96px 0 150px}
-@media(max-width:860px){.hero{padding:96px 0 110px}}
+.hero{padding:96px 0 100px}
+@media(max-width:860px){.hero{padding:96px 0 80px}}
