@@ -3,13 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>AI Workflows — Heejin Kim</title>
 <meta name="description" content="How Heejin Kim uses AI across the recruiting process.">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="css/image-modal.css">
-<script src="js/image-modal.js" defer></script>
 <style>
 /* workflow screenshot + stage/tool line */
 .w .shot{margin:26px 0 0;max-width:640px}
@@ -18,7 +16,19 @@
 .side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,200px);column-gap:48px;align-items:start}
 .side h3,.side p{grid-column:1}
 .side .shot{grid-column:2;grid-row:1 / span 4;margin:0;max-width:200px}
-.side .shot-meta{grid-column:1}
+.side /* lightbox: pure CSS (no JavaScript). Clicking a thumbnail jumps to #lb-N, which :target shows. */
+.lb{display:none}
+.lb:target{display:flex;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center;animation:lbin .25s ease}
+@keyframes lbin{from{opacity:0}to{opacity:1}}
+.lb-bg{position:absolute;inset:0;background:rgba(27,26,24,.72);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);cursor:zoom-out}
+.lb-fig{position:relative;margin:0;display:flex;flex-direction:column;align-items:center;max-width:94vw;pointer-events:none}
+.lb-fig img{display:block;max-width:94vw;max-height:calc(100vh - 110px);max-height:calc(100dvh - 110px);width:auto;height:auto;border-radius:14px;background:var(--card);box-shadow:0 20px 70px rgba(0,0,0,.45)}
+.lb-fig figcaption{margin-top:14px;max-width:760px;text-align:center;font-size:13px;line-height:1.5;color:#f4efdf}
+.lb-x{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--card);color:var(--ink);border:1px solid var(--line);font-size:26px;line-height:1;text-decoration:none}
+.lb-x:hover{transform:scale(1.06)}
+body:has(.lb:target){overflow:hidden}
+@media(prefers-reduced-motion:reduce){.lb:target{animation:none}}
+.shot-meta{grid-column:1}
 .shot-link{display:block;text-decoration:none}
 .shot-open{display:block;margin-top:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .shot-link:hover .shot-photo{box-shadow:0 6px 20px rgba(0,0,0,.12)}
@@ -53,27 +63,48 @@
       <div class="w"><span class="ix">01</span><div class="side"><h3>One Stop Hiring Hub</h3><p>I built a self-serve Hiring Hub for the three businesses I support — a form where a hiring manager picks their group, title, level, and location, and it generates a first-draft job description, panel prompt, interview guide, scorecard and market insights report on the spot, pulling from our existing SharePoint templates where they exist.</p>
         <div class="shot-meta"><span><b>Stage</b> Hiring</span></div>
         <figure class="shot">
-          <a class="shot-link modal-img" href="hiring-hub-strategy.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="hiring-hub-strategy.png" alt="Screenshot of the One Stop Hiring Hub request form"><span class="shot-open">View larger</span></a>
+          <a class="shot-link" href="#lb-1" title="Click to expand"><img class="shot-photo" src="hiring-hub-strategy.png" alt="Screenshot of the One Stop Hiring Hub request form"><span class="shot-open">Click to expand</span></a>
         </figure></div></div>
       <div class="w"><span class="ix">02</span><div class="side"><h3>Boolean search builder</h3><p>Uses job descriptions and intake notes to create Boolean search strings with broader options to explore the talent pool and targeted searches to refine results.</p>
         <div class="shot-meta"><span><b>Stage</b> Sourcing</span></div>
         <figure class="shot">
-          <a class="shot-link modal-img" href="boolean-search-anon.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="boolean-search-anon.png" alt="Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings"><span class="shot-open">View larger</span></a>
+          <a class="shot-link" href="#lb-2" title="Click to expand"><img class="shot-photo" src="boolean-search-anon.png" alt="Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings"><span class="shot-open">Click to expand</span></a>
         </figure></div></div>
       <div class="w"><span class="ix">03</span><div class="side"><h3>Status reporting</h3><p>Turns pipeline data and notes into clear updates for leadership in an email friendly format.</p>
         <div class="shot-meta"><span><b>Stage</b> Reporting</span></div>
         <figure class="shot">
-          <a class="shot-link modal-img" href="status-report.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="status-report.png" alt="Sample status report with placeholder reqs: summary counts and open requisitions by stage"><span class="shot-open">View larger</span></a>
+          <a class="shot-link" href="#lb-3" title="Click to expand"><img class="shot-photo" src="status-report.png" alt="Sample status report with placeholder reqs: summary counts and open requisitions by stage"><span class="shot-open">Click to expand</span></a>
         </figure></div></div>
       <div class="w"><span class="ix">04</span><div class="side"><h3>Dashboards</h3><p>Bring pipeline, hiring data and daily priorities into one view, helping me track each search, draft follow-up messages and plan a balanced workload.</p>
         <div class="shot-meta"><span><b>Stage</b> Analytics</span></div>
         <figure class="shot">
-          <a class="shot-link modal-img" href="dashboard.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="dashboard.png" alt="Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week"><span class="shot-open">View larger</span></a>
+          <a class="shot-link" href="#lb-4" title="Click to expand"><img class="shot-photo" src="dashboard.png" alt="Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week"><span class="shot-open">Click to expand</span></a>
         </figure></div></div>
     </div>
     <p class="note">Examples are adapted from my own workflows, with company branding and internal details removed.</p>
   </div>
 </section>
+
+<div class="lb" id="lb-1" role="dialog" aria-modal="true" aria-label="Screenshot of the One Stop Hiring Hub request form">
+  <a class="lb-bg" href="#close" aria-label="Close image"></a>
+  <figure class="lb-fig"><img src="hiring-hub-strategy.png" alt="Screenshot of the One Stop Hiring Hub request form"><figcaption>Screenshot of the One Stop Hiring Hub request form</figcaption></figure>
+  <a class="lb-x" href="#close" aria-label="Close image">&times;</a>
+</div>
+<div class="lb" id="lb-2" role="dialog" aria-modal="true" aria-label="Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings">
+  <a class="lb-bg" href="#close" aria-label="Close image"></a>
+  <figure class="lb-fig"><img src="boolean-search-anon.png" alt="Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings"><figcaption>Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings</figcaption></figure>
+  <a class="lb-x" href="#close" aria-label="Close image">&times;</a>
+</div>
+<div class="lb" id="lb-3" role="dialog" aria-modal="true" aria-label="Sample status report with placeholder reqs: summary counts and open requisitions by stage">
+  <a class="lb-bg" href="#close" aria-label="Close image"></a>
+  <figure class="lb-fig"><img src="status-report.png" alt="Sample status report with placeholder reqs: summary counts and open requisitions by stage"><figcaption>Sample status report with placeholder reqs: summary counts and open requisitions by stage</figcaption></figure>
+  <a class="lb-x" href="#close" aria-label="Close image">&times;</a>
+</div>
+<div class="lb" id="lb-4" role="dialog" aria-modal="true" aria-label="Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week">
+  <a class="lb-bg" href="#close" aria-label="Close image"></a>
+  <figure class="lb-fig"><img src="dashboard.png" alt="Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week"><figcaption>Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week</figcaption></figure>
+  <a class="lb-x" href="#close" aria-label="Close image">&times;</a>
+</div>
 
 <footer>© 2026 Heejin Kim. Personal site — views are my own.</footer>
 </body>
