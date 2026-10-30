@@ -3,11 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>AI Workflows — Heejin Kim</title>
 <meta name="description" content="How Heejin Kim uses AI across the recruiting process.">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/image-modal.css">
+<script src="js/image-modal.js" defer></script>
 <style>
 /* workflow screenshot + stage/tool line */
 .w .shot{margin:26px 0 0;max-width:640px}
@@ -51,22 +53,22 @@
       <div class="w"><span class="ix">01</span><div class="side"><h3>One Stop Hiring Hub</h3><p>I built a self-serve Hiring Hub for the three businesses I support — a form where a hiring manager picks their group, title, level, and location, and it generates a first-draft job description, panel prompt, interview guide, scorecard and market insights report on the spot, pulling from our existing SharePoint templates where they exist.</p>
         <div class="shot-meta"><span><b>Stage</b> Hiring</span></div>
         <figure class="shot">
-          <a class="shot-link" href="hiring-hub-strategy.png" title="Open full size in a new tab"><img class="shot-photo" src="hiring-hub-strategy.png" alt="Screenshot of the One Stop Hiring Hub request form"><span class="shot-open">Click to expand</span></a>
+          <a class="shot-link modal-img" href="hiring-hub-strategy.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="hiring-hub-strategy.png" alt="Screenshot of the One Stop Hiring Hub request form"><span class="shot-open">View larger</span></a>
         </figure></div></div>
       <div class="w"><span class="ix">02</span><div class="side"><h3>Boolean search builder</h3><p>Uses job descriptions and intake notes to create Boolean search strings with broader options to explore the talent pool and targeted searches to refine results.</p>
         <div class="shot-meta"><span><b>Stage</b> Sourcing</span></div>
         <figure class="shot">
-          <a class="shot-link" href="boolean-search-anon.png" title="Open full size in a new tab"><img class="shot-photo" src="boolean-search-anon.png" alt="Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings"><span class="shot-open">Click to expand</span></a>
+          <a class="shot-link modal-img" href="boolean-search-anon.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="boolean-search-anon.png" alt="Screenshot of Boolean search builder output: LinkedIn Recruiter and X-ray search strings"><span class="shot-open">View larger</span></a>
         </figure></div></div>
       <div class="w"><span class="ix">03</span><div class="side"><h3>Status reporting</h3><p>Turns pipeline data and notes into clear updates for leadership in an email friendly format.</p>
         <div class="shot-meta"><span><b>Stage</b> Reporting</span></div>
         <figure class="shot">
-          <a class="shot-link" href="status-report.png" title="Open full size in a new tab"><img class="shot-photo" src="status-report.png" alt="Sample status report with placeholder reqs: summary counts and open requisitions by stage"><span class="shot-open">Click to expand</span></a>
+          <a class="shot-link modal-img" href="status-report.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="status-report.png" alt="Sample status report with placeholder reqs: summary counts and open requisitions by stage"><span class="shot-open">View larger</span></a>
         </figure></div></div>
       <div class="w"><span class="ix">04</span><div class="side"><h3>Dashboards</h3><p>Bring pipeline, hiring data and daily priorities into one view, helping me track each search, draft follow-up messages and plan a balanced workload.</p>
         <div class="shot-meta"><span><b>Stage</b> Analytics</span></div>
         <figure class="shot">
-          <a class="shot-link" href="dashboard.png" title="Open full size in a new tab"><img class="shot-photo" src="dashboard.png" alt="Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week"><span class="shot-open">Click to expand</span></a>
+          <a class="shot-link modal-img" href="dashboard.png" target="_blank" rel="noopener" title="View larger"><img class="shot-photo" src="dashboard.png" alt="Sample weekly summary dashboard with placeholder data: week at a glance, follow ups, reminders, drafts and next week"><span class="shot-open">View larger</span></a>
         </figure></div></div>
     </div>
     <p class="note">Examples are adapted from my own workflows, with company branding and internal details removed.</p>
